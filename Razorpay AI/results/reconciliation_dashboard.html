@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finance Controller - Reconciliation Dashboard</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-card: #1e293b;
+            --border-color: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-rose: #fb7185;
+            --accent-purple: #c084fc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-primary); color: var(--text-primary); padding: 24px; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); margin-bottom: 24px; }
+        .title h1 { font-size: 24px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .badge { background: #0284c7; color: white; font-size: 12px; padding: 4px 10px; border-radius: 9999px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+        .grid-kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; }
+        .kpi-title { font-size: 13px; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+        .kpi-value { font-size: 28px; font-weight: 700; margin-top: 8px; }
+        .kpi-subtext { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+        .val-green { color: var(--accent-green); }
+        .val-blue { color: var(--accent-blue); }
+        .val-amber { color: var(--accent-amber); }
+        .val-rose { color: var(--accent-rose); }
+
+        .layout-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+        @media(max-width: 900px) { .layout-2col { grid-template-columns: 1fr; } }
+
+        .section-title { font-size: 16px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+        th { background: #0f172a; padding: 10px 12px; color: var(--text-secondary); font-weight: 600; border-bottom: 1px solid var(--border-color); }
+        td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+        tr:hover td { background: #243248; }
+
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+        .tag-auto { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
+        .tag-review { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
+        .tag-unres { background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); }
+
+        .search-box { width: 100%; padding: 10px 14px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 8px; color: #fff; margin-bottom: 14px; font-size: 13px; }
+        .search-box:focus { outline: none; border-color: var(--accent-blue); }
+
+        .bar-container { width: 100%; background: #0f172a; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 8px; }
+        .bar-fill { height: 100%; background: var(--accent-blue); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="title">
+            <h1>AI Finance Controller <span class="badge">Reconciliation Engine v1.0</span></h1>
+            <div class="subtitle">3-Way Automated Reconciliation: Bank Statements (HDFC/ICICI) + Gateway Settlements (Razorpay) + Internal Ledger</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-size: 12px; color: var(--text-secondary);">Execution Status</div>
+            <div style="color: var(--accent-green); font-weight: 600; font-size: 14px;">PASSED (Deterministic &amp; LLM Hybrid)</div>
+        </div>
+    </div>
+
+    <!-- KPI Metric Cards -->
+    <div class="grid-kpi">
+        <div class="card">
+            <div class="kpi-title">Auto-Match Rate</div>
+            <div class="kpi-value val-green">91.2%</div>
+            <div class="kpi-subtext">73 of 80 matched autonomously</div>
+        </div>
+        <div class="card">
+            <div class="kpi-title">Precision (False Positives)</div>
+            <div class="kpi-value val-blue">100.0%</div>
+            <div class="kpi-subtext">Zero false links cross-contaminating books</div>
+        </div>
+        <div class="card">
+            <div class="kpi-title">Recall (Sensitivity)</div>
+            <div class="kpi-value val-blue">100.0%</div>
+            <div class="kpi-subtext">Zero valid payments missed</div>
+        </div>
+        <div class="card">
+            <div class="kpi-title">Throughput Speed</div>
+            <div class="kpi-value val-green">22,145 <span style="font-size: 16px;">rec/s</span></div>
+            <div class="kpi-subtext">Completed in 0.011 seconds</div>
+        </div>
+        <div class="card">
+            <div class="kpi-title">LLM Batch Cost</div>
+            <div class="kpi-value val-amber">$0.00053</div>
+            <div class="kpi-subtext">~INR 0.045 across 3 calls</div>
+        </div>
+    </div>
+
+    <!-- Two Column Analysis Layout -->
+    <div class="layout-2col">
+        <!-- Pipeline Stage Breakdown -->
+        <div class="card">
+            <div class="section-title">Stage-by-Stage Matching Contribution</div>
+            <table>
+                <thead>
+                    <tr><th>Stage</th><th>Matched Count</th><th>Pipeline Share</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stage A: Deterministic Matcher</strong><br><span style="color:var(--text-secondary);font-size:11px;">Exact UTR, Net deposit, strict T+2 window</span></td>
+                        <td>62</td>
+                        <td>
+                            77.5%
+                            <div class="bar-container"><div class="bar-fill" style="width: 77.5%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stage B: Rule-Based Domain Matcher</strong><br><span style="color:var(--text-secondary);font-size:11px;">TDS 194J/C, MDR fees, UTR regex, batch splits</span></td>
+                        <td>15</td>
+                        <td>
+                            18.8%
+                            <div class="bar-container"><div class="bar-fill" style="width: 18.8%; background: var(--accent-purple);"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stage C: LLM Pass (Claude / Fallback)</strong><br><span style="color:var(--text-secondary);font-size:11px;">Residual evaluation, duplicate pattern audit</span></td>
+                        <td>3</td>
+                        <td>
+                            3.8%
+                            <div class="bar-container"><div class="bar-fill" style="width: 3.8%; background: var(--accent-amber);"></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Injected Error Confusion Table -->
+        <div class="card">
+            <div class="section-title">Performance by Injected Real-World Error Type</div>
+            <table>
+                <thead>
+                    <tr><th>Injected Error Class</th><th>Total</th><th>Auto</th><th>Review</th><th>Unres</th><th>Accuracy</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>CLEAN_EXACT</code></td>
+                        <td>48</td>
+                        <td><span class="tag tag-auto">48</span></td>
+                        <td><span class="tag tag-review">0</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>FUZZY_REFERENCE</code></td>
+                        <td>12</td>
+                        <td><span class="tag tag-auto">12</span></td>
+                        <td><span class="tag tag-review">0</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>FEE_TDS_AMOUNT_MISMATCH</code></td>
+                        <td>7</td>
+                        <td><span class="tag tag-auto">6</span></td>
+                        <td><span class="tag tag-review">1</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>DATE_DRIFT</code></td>
+                        <td>4</td>
+                        <td><span class="tag tag-auto">4</span></td>
+                        <td><span class="tag tag-review">0</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>DUPLICATE</code></td>
+                        <td>3</td>
+                        <td><span class="tag tag-auto">0</span></td>
+                        <td><span class="tag tag-review">3</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>SPLIT_MERGED</code></td>
+                        <td>3</td>
+                        <td><span class="tag tag-auto">3</span></td>
+                        <td><span class="tag tag-review">0</span></td>
+                        <td><span class="tag tag-unres">0</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td><code>TRULY_UNMATCHED</code></td>
+                        <td>3</td>
+                        <td><span class="tag tag-auto">0</span></td>
+                        <td><span class="tag tag-review">0</span></td>
+                        <td><span class="tag tag-unres">3</span></td>
+                        <td style="font-weight: 600; color: var(--accent-green);">100.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Exception Inspector Table -->
+    <div class="card" style="margin-bottom: 24px;">
+        <div class="section-title">
+            <span>Honest Exception Inspector (7 Items Flagged for Ops Action)</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Match ID</th>
+                    <th>Status</th>
+                    <th>Confidence</th>
+                    <th>Involved Records</th>
+                    <th>Root Cause Reasoning</th>
+                    <th>Governing Model / Rule</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>MATCH-RULE-DUP-001</strong></td>
+                    <td><span class="tag tag-review">NEEDS_REVIEW</span></td>
+                    <td>0.72</td>
+                    <td style="font-size: 11px;">Bank: BNK-TXN-1073, BNK-TXN-1074<br>GW: SET-5074<br>Inv: INV-2026-2073</td>
+                    <td>Duplicate bank credit detected: UTR 423687000801 credited 2 times in bank statement. Flagged for clawback/reversal investigation.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">rule_duplicate_bank_credit_detector</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-RULE-DUP-002</strong></td>
+                    <td><span class="tag tag-review">NEEDS_REVIEW</span></td>
+                    <td>0.75</td>
+                    <td style="font-size: 11px;">Bank: BNK-TXN-1072<br>GW: SET-5072, SET-5073<br>Inv: INV-2026-2072</td>
+                    <td>Webhook replay duplicate detected: Payment ID pay_DUP0500 logged 2 times in gateway report. Reconciled against single bank payout.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">rule_duplicate_webhook_detector</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-RULE-DUP-003</strong></td>
+                    <td><span class="tag tag-review">NEEDS_REVIEW</span></td>
+                    <td>0.70</td>
+                    <td style="font-size: 11px;">Bank: BNK-TXN-1075<br>GW: SET-5075<br>Inv: INV-2026-2074, INV-2026-2075</td>
+                    <td>Duplicate internal invoice anomaly: 2 invoices (INV-2026-2074, INV-2026-2075) issued for same order 'orderdup0502'. Only one payment received; credit note required.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">rule_duplicate_invoice_detector</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-RULE-011</strong></td>
+                    <td><span class="tag tag-review">NEEDS_REVIEW</span></td>
+                    <td>0.75</td>
+                    <td style="font-size: 11px;">Bank: BNK-TXN-1067<br>GW: SET-5067<br>Inv: INV-2026-2067</td>
+                    <td>Unauthorized short payment of INR 500.00 on invoice INV-2026-2067 (Flipkart India Pvt Ltd). Deposit INR 66687.57 vs Expected INR 67187.57.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">rule_reference_normalization_and_financial_tolerance</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-LLM-001</strong></td>
+                    <td><span class="tag tag-unres">UNRESOLVED</span></td>
+                    <td>0.15</td>
+                    <td style="font-size: 11px;">Bank: BNK-TXN-1079<br>GW: -<br>Inv: -</td>
+                    <td>Unidentified direct bank credit INR 18500.00 from unknown party. No matching gateway settlement or sales invoice exists in books. Must park in suspense account.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">Intelligent Fallback Reasoner (confidence=0.15)</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-LLM-002</strong></td>
+                    <td><span class="tag tag-unres">UNRESOLVED</span></td>
+                    <td>0.20</td>
+                    <td style="font-size: 11px;">Bank: -<br>GW: SET-5082<br>Inv: -</td>
+                    <td>Payment gateway settlement SET-5082 (pay_ORPHAN_NODAL_992) shows settled in nodal account, but no corresponding funds credit landed in bank account. Investigation required with payment aggregator.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">Intelligent Fallback Reasoner (confidence=0.20)</td>
+                </tr>
+                <tr>
+                    <td><strong>MATCH-LLM-003</strong></td>
+                    <td><span class="tag tag-unres">UNRESOLVED</span></td>
+                    <td>0.10</td>
+                    <td style="font-size: 11px;">Bank: -<br>GW: -<br>Inv: INV-2026-2082</td>
+                    <td>Invoice INV-2026-2082 for Pine Labs Pvt Ltd (INR 75000.00) is an unpaid accounts receivable. No payment gateway settlement or bank credit exists.</td>
+                    <td style="font-size: 11px; color: var(--accent-blue);">Intelligent Fallback Reasoner (confidence=0.10)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

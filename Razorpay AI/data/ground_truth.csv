@@ -1,0 +1,81 @@
+match_group_id,bank_txn_ids,gateway_settlement_ids,invoice_ids,match_category,injected_error_type,expected_decision,true_amount_inr,notes
+GRP-001,BNK-TXN-1001,SET-5001,INV-2026-2001,EXACT,CLEAN_EXACT,AUTO_MATCH,21948.47,Clean exact match. Net bank deposit ₹21948.47 equals gateway net payout. UTR 421175000100 verified.
+GRP-002,BNK-TXN-1002,SET-5002,INV-2026-2002,EXACT,CLEAN_EXACT,AUTO_MATCH,20433.3,Clean exact match. Net bank deposit ₹20433.3 equals gateway net payout. UTR 426577000101 verified.
+GRP-003,BNK-TXN-1003,SET-5003,INV-2026-2003,EXACT,CLEAN_EXACT,AUTO_MATCH,50703.68,Clean exact match. Net bank deposit ₹50703.68 equals gateway net payout. UTR 428086000102 verified.
+GRP-004,BNK-TXN-1004,SET-5004,INV-2026-2004,EXACT,CLEAN_EXACT,AUTO_MATCH,63711.81,Clean exact match. Net bank deposit ₹63711.81 equals gateway net payout. UTR 421333000103 verified.
+GRP-005,BNK-TXN-1005,SET-5005,INV-2026-2005,EXACT,CLEAN_EXACT,AUTO_MATCH,39861.98,Clean exact match. Net bank deposit ₹39861.98 equals gateway net payout. UTR 421902000104 verified.
+GRP-006,BNK-TXN-1006,SET-5006,INV-2026-2006,EXACT,CLEAN_EXACT,AUTO_MATCH,5326.34,Clean exact match. Net bank deposit ₹5326.34 equals gateway net payout. UTR 422202000105 verified.
+GRP-007,BNK-TXN-1007,SET-5007,INV-2026-2007,EXACT,CLEAN_EXACT,AUTO_MATCH,71148.22,Clean exact match. Net bank deposit ₹71148.22 equals gateway net payout. UTR 421367000106 verified.
+GRP-008,BNK-TXN-1008,SET-5008,INV-2026-2008,EXACT,CLEAN_EXACT,AUTO_MATCH,15790.08,Clean exact match. Net bank deposit ₹15790.08 equals gateway net payout. UTR 427139000107 verified.
+GRP-009,BNK-TXN-1009,SET-5009,INV-2026-2009,EXACT,CLEAN_EXACT,AUTO_MATCH,6170.82,Clean exact match. Net bank deposit ₹6170.82 equals gateway net payout. UTR 428840000108 verified.
+GRP-010,BNK-TXN-1010,SET-5010,INV-2026-2010,EXACT,CLEAN_EXACT,AUTO_MATCH,43185.81,Clean exact match. Net bank deposit ₹43185.81 equals gateway net payout. UTR 428611000109 verified.
+GRP-011,BNK-TXN-1011,SET-5011,INV-2026-2011,EXACT,CLEAN_EXACT,AUTO_MATCH,76468.21,Clean exact match. Net bank deposit ₹76468.21 equals gateway net payout. UTR 423295000110 verified.
+GRP-012,BNK-TXN-1012,SET-5012,INV-2026-2012,EXACT,CLEAN_EXACT,AUTO_MATCH,52619.9,Clean exact match. Net bank deposit ₹52619.9 equals gateway net payout. UTR 427403000111 verified.
+GRP-013,BNK-TXN-1013,SET-5013,INV-2026-2013,EXACT,CLEAN_EXACT,AUTO_MATCH,73375.11,Clean exact match. Net bank deposit ₹73375.11 equals gateway net payout. UTR 420765000112 verified.
+GRP-014,BNK-TXN-1014,SET-5014,INV-2026-2014,EXACT,CLEAN_EXACT,AUTO_MATCH,14359.11,Clean exact match. Net bank deposit ₹14359.11 equals gateway net payout. UTR 420779000113 verified.
+GRP-015,BNK-TXN-1015,SET-5015,INV-2026-2015,EXACT,CLEAN_EXACT,AUTO_MATCH,10385.3,Clean exact match. Net bank deposit ₹10385.3 equals gateway net payout. UTR 426851000114 verified.
+GRP-016,BNK-TXN-1016,SET-5016,INV-2026-2016,EXACT,CLEAN_EXACT,AUTO_MATCH,81117.23,Clean exact match. Net bank deposit ₹81117.23 equals gateway net payout. UTR 429954000115 verified.
+GRP-017,BNK-TXN-1017,SET-5017,INV-2026-2017,EXACT,CLEAN_EXACT,AUTO_MATCH,83774.34,Clean exact match. Net bank deposit ₹83774.34 equals gateway net payout. UTR 428225000116 verified.
+GRP-018,BNK-TXN-1018,SET-5018,INV-2026-2018,EXACT,CLEAN_EXACT,AUTO_MATCH,42080.2,Clean exact match. Net bank deposit ₹42080.2 equals gateway net payout. UTR 420771000117 verified.
+GRP-019,BNK-TXN-1019,SET-5019,INV-2026-2019,EXACT,CLEAN_EXACT,AUTO_MATCH,72593.55,Clean exact match. Net bank deposit ₹72593.55 equals gateway net payout. UTR 424257000118 verified.
+GRP-020,BNK-TXN-1020,SET-5020,INV-2026-2020,EXACT,CLEAN_EXACT,AUTO_MATCH,84594.97,Clean exact match. Net bank deposit ₹84594.97 equals gateway net payout. UTR 426451000119 verified.
+GRP-021,BNK-TXN-1021,SET-5021,INV-2026-2021,EXACT,CLEAN_EXACT,AUTO_MATCH,46625.49,Clean exact match. Net bank deposit ₹46625.49 equals gateway net payout. UTR 425070000120 verified.
+GRP-022,BNK-TXN-1022,SET-5022,INV-2026-2022,EXACT,CLEAN_EXACT,AUTO_MATCH,43383.44,Clean exact match. Net bank deposit ₹43383.44 equals gateway net payout. UTR 422457000121 verified.
+GRP-023,BNK-TXN-1023,SET-5023,INV-2026-2023,EXACT,CLEAN_EXACT,AUTO_MATCH,35489.51,Clean exact match. Net bank deposit ₹35489.51 equals gateway net payout. UTR 420634000122 verified.
+GRP-024,BNK-TXN-1024,SET-5024,INV-2026-2024,EXACT,CLEAN_EXACT,AUTO_MATCH,29831.77,Clean exact match. Net bank deposit ₹29831.77 equals gateway net payout. UTR 428214000123 verified.
+GRP-025,BNK-TXN-1025,SET-5025,INV-2026-2025,EXACT,CLEAN_EXACT,AUTO_MATCH,74519.58,Clean exact match. Net bank deposit ₹74519.58 equals gateway net payout. UTR 420880000124 verified.
+GRP-026,BNK-TXN-1026,SET-5026,INV-2026-2026,EXACT,CLEAN_EXACT,AUTO_MATCH,64422.72,Clean exact match. Net bank deposit ₹64422.72 equals gateway net payout. UTR 422448000125 verified.
+GRP-027,BNK-TXN-1027,SET-5027,INV-2026-2027,EXACT,CLEAN_EXACT,AUTO_MATCH,1679.97,Clean exact match. Net bank deposit ₹1679.97 equals gateway net payout. UTR 423972000126 verified.
+GRP-028,BNK-TXN-1028,SET-5028,INV-2026-2028,EXACT,CLEAN_EXACT,AUTO_MATCH,80442.9,Clean exact match. Net bank deposit ₹80442.9 equals gateway net payout. UTR 425570000127 verified.
+GRP-029,BNK-TXN-1029,SET-5029,INV-2026-2029,EXACT,CLEAN_EXACT,AUTO_MATCH,72702.11,Clean exact match. Net bank deposit ₹72702.11 equals gateway net payout. UTR 421901000128 verified.
+GRP-030,BNK-TXN-1030,SET-5030,INV-2026-2030,EXACT,CLEAN_EXACT,AUTO_MATCH,11510.53,Clean exact match. Net bank deposit ₹11510.53 equals gateway net payout. UTR 428256000129 verified.
+GRP-031,BNK-TXN-1031,SET-5031,INV-2026-2031,EXACT,CLEAN_EXACT,AUTO_MATCH,45152.36,Clean exact match. Net bank deposit ₹45152.36 equals gateway net payout. UTR 429272000130 verified.
+GRP-032,BNK-TXN-1032,SET-5032,INV-2026-2032,EXACT,CLEAN_EXACT,AUTO_MATCH,55399.32,Clean exact match. Net bank deposit ₹55399.32 equals gateway net payout. UTR 424990000131 verified.
+GRP-033,BNK-TXN-1033,SET-5033,INV-2026-2033,EXACT,CLEAN_EXACT,AUTO_MATCH,19298.39,Clean exact match. Net bank deposit ₹19298.39 equals gateway net payout. UTR 422988000132 verified.
+GRP-034,BNK-TXN-1034,SET-5034,INV-2026-2034,EXACT,CLEAN_EXACT,AUTO_MATCH,46858.7,Clean exact match. Net bank deposit ₹46858.7 equals gateway net payout. UTR 423985000133 verified.
+GRP-035,BNK-TXN-1035,SET-5035,INV-2026-2035,EXACT,CLEAN_EXACT,AUTO_MATCH,12713.31,Clean exact match. Net bank deposit ₹12713.31 equals gateway net payout. UTR 421152000134 verified.
+GRP-036,BNK-TXN-1036,SET-5036,INV-2026-2036,EXACT,CLEAN_EXACT,AUTO_MATCH,72718.22,Clean exact match. Net bank deposit ₹72718.22 equals gateway net payout. UTR 425290000135 verified.
+GRP-037,BNK-TXN-1037,SET-5037,INV-2026-2037,EXACT,CLEAN_EXACT,AUTO_MATCH,64333.49,Clean exact match. Net bank deposit ₹64333.49 equals gateway net payout. UTR 426275000136 verified.
+GRP-038,BNK-TXN-1038,SET-5038,INV-2026-2038,EXACT,CLEAN_EXACT,AUTO_MATCH,78514.03,Clean exact match. Net bank deposit ₹78514.03 equals gateway net payout. UTR 426103000137 verified.
+GRP-039,BNK-TXN-1039,SET-5039,INV-2026-2039,EXACT,CLEAN_EXACT,AUTO_MATCH,31194.42,Clean exact match. Net bank deposit ₹31194.42 equals gateway net payout. UTR 429903000138 verified.
+GRP-040,BNK-TXN-1040,SET-5040,INV-2026-2040,EXACT,CLEAN_EXACT,AUTO_MATCH,75325.25,Clean exact match. Net bank deposit ₹75325.25 equals gateway net payout. UTR 424619000139 verified.
+GRP-041,BNK-TXN-1041,SET-5041,INV-2026-2041,EXACT,CLEAN_EXACT,AUTO_MATCH,35926.58,Clean exact match. Net bank deposit ₹35926.58 equals gateway net payout. UTR 421974000140 verified.
+GRP-042,BNK-TXN-1042,SET-5042,INV-2026-2042,EXACT,CLEAN_EXACT,AUTO_MATCH,10525.98,Clean exact match. Net bank deposit ₹10525.98 equals gateway net payout. UTR 428828000141 verified.
+GRP-043,BNK-TXN-1043,SET-5043,INV-2026-2043,EXACT,CLEAN_EXACT,AUTO_MATCH,74255.47,Clean exact match. Net bank deposit ₹74255.47 equals gateway net payout. UTR 422632000142 verified.
+GRP-044,BNK-TXN-1044,SET-5044,INV-2026-2044,EXACT,CLEAN_EXACT,AUTO_MATCH,34873.15,Clean exact match. Net bank deposit ₹34873.15 equals gateway net payout. UTR 429591000143 verified.
+GRP-045,BNK-TXN-1045,SET-5045,INV-2026-2045,EXACT,CLEAN_EXACT,AUTO_MATCH,81871.62,Clean exact match. Net bank deposit ₹81871.62 equals gateway net payout. UTR 422147000144 verified.
+GRP-046,BNK-TXN-1046,SET-5046,INV-2026-2046,EXACT,CLEAN_EXACT,AUTO_MATCH,83683.69,Clean exact match. Net bank deposit ₹83683.69 equals gateway net payout. UTR 421810000145 verified.
+GRP-047,BNK-TXN-1047,SET-5047,INV-2026-2047,EXACT,CLEAN_EXACT,AUTO_MATCH,78785.53,Clean exact match. Net bank deposit ₹78785.53 equals gateway net payout. UTR 425776000146 verified.
+GRP-048,BNK-TXN-1048,SET-5048,INV-2026-2048,EXACT,CLEAN_EXACT,AUTO_MATCH,78384.37,Clean exact match. Net bank deposit ₹78384.37 equals gateway net payout. UTR 426619000147 verified.
+GRP-049,BNK-TXN-1049,SET-5049,INV-2026-2049,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,25936.82,Fuzzy match with truncated_narration. References reconcile under regex normalization and amount alignment.
+GRP-050,BNK-TXN-1050,SET-5050,INV-2026-2050,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,20154.14,Fuzzy match with missing_hyphen_order_ref. References reconcile under regex normalization and amount alignment.
+GRP-051,BNK-TXN-1051,SET-5051,INV-2026-2051,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,28203.11,Fuzzy match with leading_zero_omitted. References reconcile under regex normalization and amount alignment.
+GRP-052,BNK-TXN-1052,SET-5052,INV-2026-2052,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,32380.76,Fuzzy match with lowercase_utr. References reconcile under regex normalization and amount alignment.
+GRP-053,BNK-TXN-1053,SET-5053,INV-2026-2053,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,14350.41,Fuzzy match with bank_prefix_cms_variation. References reconcile under regex normalization and amount alignment.
+GRP-054,BNK-TXN-1054,SET-5054,INV-2026-2054,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,53509.8,Fuzzy match with alphanumeric_neft_spacing. References reconcile under regex normalization and amount alignment.
+GRP-055,BNK-TXN-1055,SET-5055,INV-2026-2055,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,3316.05,Fuzzy match with truncated_narration. References reconcile under regex normalization and amount alignment.
+GRP-056,BNK-TXN-1056,SET-5056,INV-2026-2056,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,5862.45,Fuzzy match with missing_hyphen_order_ref. References reconcile under regex normalization and amount alignment.
+GRP-057,BNK-TXN-1057,SET-5057,INV-2026-2057,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,49455.37,Fuzzy match with leading_zero_omitted. References reconcile under regex normalization and amount alignment.
+GRP-058,BNK-TXN-1058,SET-5058,INV-2026-2058,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,17773.92,Fuzzy match with lowercase_utr. References reconcile under regex normalization and amount alignment.
+GRP-059,BNK-TXN-1059,SET-5059,INV-2026-2059,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,7416.55,Fuzzy match with bank_prefix_cms_variation. References reconcile under regex normalization and amount alignment.
+GRP-060,BNK-TXN-1060,SET-5060,INV-2026-2060,FUZZY,FUZZY_REFERENCE,AUTO_MATCH,24833.01,Fuzzy match with alphanumeric_neft_spacing. References reconcile under regex normalization and amount alignment.
+GRP-061,BNK-TXN-1061,SET-5061,INV-2026-2061,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,32009.53,Gateway deducted 2% MDR + 18% GST; ledger recorded full gross amount. Reconciliation requires statutory tax/MDR formula verification.
+GRP-062,BNK-TXN-1062,SET-5062,INV-2026-2062,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,65292.87,B2B client deducted 10% TDS under Sec 194J; bank shows net receipt. Reconciliation requires statutory tax/MDR formula verification.
+GRP-063,BNK-TXN-1063,SET-5063,INV-2026-2063,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,116070.67,B2B client deducted 2% TDS under Sec 194C; bank shows net receipt. Reconciliation requires statutory tax/MDR formula verification.
+GRP-064,BNK-TXN-1064,SET-5064,INV-2026-2064,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,28628.78,Fractional paise rounding difference of ₹0.68 between gateway & bank. Reconciliation requires statutory tax/MDR formula verification.
+GRP-065,BNK-TXN-1065,SET-5065,INV-2026-2065,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,144455.44,Gateway deducted 1.8% Netbanking fee + 18% GST. Reconciliation requires statutory tax/MDR formula verification.
+GRP-066,BNK-TXN-1066,SET-5066,INV-2026-2066,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,AUTO_MATCH,69049.97,Both 10% TDS and gateway processing fee applied. Reconciliation requires statutory tax/MDR formula verification.
+GRP-067,BNK-TXN-1067,SET-5067,INV-2026-2067,FEE_TDS,FEE_TDS_AMOUNT_MISMATCH,NEEDS_REVIEW,66687.57,Customer short-paid by ₹500 without valid deduction reason. Reconciliation requires statutory tax/MDR formula verification.
+GRP-068,BNK-TXN-1068,SET-5068,INV-2026-2068,DATE_DRIFT,DATE_DRIFT,AUTO_MATCH,5775.33,Settlement lagged by 4 calendar days due to banking holiday weekend. Identifiers and amount match perfectly.
+GRP-069,BNK-TXN-1069,SET-5069,INV-2026-2069,DATE_DRIFT,DATE_DRIFT,AUTO_MATCH,42984.47,Settlement lagged by 3 calendar days due to banking holiday weekend. Identifiers and amount match perfectly.
+GRP-070,BNK-TXN-1070,SET-5070,INV-2026-2070,DATE_DRIFT,DATE_DRIFT,AUTO_MATCH,42910.28,Settlement lagged by 5 calendar days due to banking holiday weekend. Identifiers and amount match perfectly.
+GRP-071,BNK-TXN-1071,SET-5071,INV-2026-2071,DATE_DRIFT,DATE_DRIFT,AUTO_MATCH,43588.83,Settlement lagged by 3 calendar days due to banking holiday weekend. Identifiers and amount match perfectly.
+GRP-072,BNK-TXN-1072,SET-5072;SET-5073,INV-2026-2072,DUPLICATE,DUPLICATE,NEEDS_REVIEW,17519.71,Webhook replay duplicate detected in gateway. Only one bank credit exists for duplicate settlement records.
+GRP-073,BNK-TXN-1073;BNK-TXN-1074,SET-5074,INV-2026-2073,DUPLICATE,DUPLICATE,NEEDS_REVIEW,24732.63,Double bank credit anomaly: Bank credited twice for single gateway settlement. Flagged for clawback/reversal.
+GRP-074,BNK-TXN-1075,SET-5075,INV-2026-2074;INV-2026-2075,DUPLICATE,DUPLICATE,NEEDS_REVIEW,16332.89,Duplicate internal invoice issued for same order. Single payment received.
+GRP-075,BNK-TXN-1076,SET-5076;SET-5077,INV-2026-2076;INV-2026-2077,SPLIT_MERGED,SPLIT_MERGED,AUTO_MATCH,39962.02,Batch settlement payout: 1 bank line (₹39962.02) aggregates 2 gateway transactions (₹20123.25 + ₹19838.77).
+GRP-076,BNK-TXN-1077,SET-5078;SET-5079,INV-2026-2078;INV-2026-2079,SPLIT_MERGED,SPLIT_MERGED,AUTO_MATCH,43435.77,Batch settlement payout: 1 bank line (₹43435.77) aggregates 2 gateway transactions (₹16572.55 + ₹26863.22).
+GRP-077,BNK-TXN-1078,SET-5080;SET-5081,INV-2026-2080;INV-2026-2081,SPLIT_MERGED,SPLIT_MERGED,AUTO_MATCH,39065.91,Batch settlement payout: 1 bank line (₹39065.91) aggregates 2 gateway transactions (₹22676.37 + ₹16389.54).
+GRP-078,BNK-TXN-1079,,,UNMATCHED,TRULY_UNMATCHED,UNRESOLVED,18500.0,Unidentified bank credit without matching gateway transaction or invoice. Potential suspense account entry.
+GRP-079,,SET-5082,,UNMATCHED,TRULY_UNMATCHED,UNRESOLVED,14200.0,"Gateway settlement reported as nodal-settled, but absent from bank statement (unsettled gateway float)."
+GRP-080,,,INV-2026-2082,UNMATCHED,TRULY_UNMATCHED,UNRESOLVED,67500.0,Internal invoice unpaid. No payment gateway settlement or bank credit ever received.

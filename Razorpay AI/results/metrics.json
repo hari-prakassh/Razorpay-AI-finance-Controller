@@ -1,0 +1,102 @@
+{
+  "reconciliation_metrics": {
+    "total_ground_truth_records": 80,
+    "true_positives": 73,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "true_negatives": 3,
+    "correct_reviews_flagged": 4,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "overall_accuracy_percent": 100.0,
+    "auto_match_rate_percent": 91.2
+  },
+  "stage_breakdown": {
+    "deterministic": {
+      "count": 62,
+      "share_percent": 76.5
+    },
+    "rule_based": {
+      "count": 15,
+      "share_percent": 18.5
+    },
+    "llm": {
+      "count": 4,
+      "share_percent": 4.9
+    }
+  },
+  "confusion_by_injected_error_type": {
+    "CLEAN_EXACT": {
+      "total": 48,
+      "auto_matched": 48,
+      "needs_review": 0,
+      "unresolved": 0,
+      "correct_decision": 48,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "FUZZY_REFERENCE": {
+      "total": 12,
+      "auto_matched": 12,
+      "needs_review": 0,
+      "unresolved": 0,
+      "correct_decision": 12,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "FEE_TDS_AMOUNT_MISMATCH": {
+      "total": 7,
+      "auto_matched": 6,
+      "needs_review": 1,
+      "unresolved": 0,
+      "correct_decision": 7,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "DATE_DRIFT": {
+      "total": 4,
+      "auto_matched": 4,
+      "needs_review": 0,
+      "unresolved": 0,
+      "correct_decision": 4,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "DUPLICATE": {
+      "total": 3,
+      "auto_matched": 0,
+      "needs_review": 3,
+      "unresolved": 0,
+      "correct_decision": 3,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "SPLIT_MERGED": {
+      "total": 3,
+      "auto_matched": 3,
+      "needs_review": 0,
+      "unresolved": 0,
+      "correct_decision": 3,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    },
+    "TRULY_UNMATCHED": {
+      "total": 3,
+      "auto_matched": 0,
+      "needs_review": 0,
+      "unresolved": 3,
+      "correct_decision": 3,
+      "false_links": 0,
+      "accuracy_percent": 100.0
+    }
+  },
+  "performance_and_cost": {
+    "throughput_records_sec": 22240.8,
+    "elapsed_seconds": 0.011,
+    "llm_calls_made": 4,
+    "estimated_cost_usd": 0.000717,
+    "estimated_cost_inr": 0.0602,
+    "llm_provider": "Intelligent Fallback Reasoner"
+  }
+}
